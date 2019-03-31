@@ -35,6 +35,6 @@ if response.status_code==200:
 	df = pd.DataFrame({'Moedas':['Euro','Dollar','bitcoin'],'Valores':[euro_real,dolar_real,btc_real]})
 	df.to_csv("valores.csv",index=False, sep=";", decimal = ",")
 
-	print("Arquivo exportado com sucesso para a pasta do projeto")
+	print("Arquivo exportado com sucesso para a pasta do programa.")
 
 	

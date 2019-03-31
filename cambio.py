@@ -15,7 +15,8 @@ if response.status_code==200:
 	print(response)
 	dados = response.json()
 	day = dados["date"]
-	print("Acessando dados do dia %s/%s/%s" % (day[8:],day[5:7],day[0:4]))
+	day = day[8:10] + "/" + day[5:7] + "/" + day[0:4]
+	print("Acessando dados do dia %s/%s/%s" % (day,day,day))
 	print(dados['rates']['EUR'])
 	print(dados['rates']['BRL'])
 	print(dados['rates']['USD'])
@@ -32,7 +33,7 @@ if response.status_code==200:
 	print(btc_real)
 
 	
-	df = pd.DataFrame({'Moedas':['Euro','Dollar','bitcoin'],'Valores':[euro_real,dolar_real,btc_real]})
+	df = pd.DataFrame({'Moedas':['Euro','Dollar','bitcoin'],'Valores':[euro_real,dolar_real,btc_real],'Dia de Acesso':[day,day,day]})
 	df.to_csv("valores.csv",index=False, sep=";", decimal = ",")
 
 	print("Arquivo exportado com sucesso para a pasta do programa.")

@@ -11,7 +11,6 @@ if response.status_code==200:
 	print(response)
 	dados = response.json()
 	print(dados['rates']['EUR'])
-
 	print(dados['rates']['BRL'])
 	print(dados['rates']['USD'])
 	print(dados['rates']['BTC'])

@@ -6,6 +6,8 @@
 	-Euro
 	-Bitcoin
 
+API utilizada: [FIXER.IO](http://fixer.io/)
+
 ### Desenvolvedor
 
 	-Bruno Santos

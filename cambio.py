@@ -10,6 +10,8 @@ if response.status_code==200:
 	print("Buscando informações das moedas...")
 	print(response)
 	dados = response.json()
+	day = dados["date"]
+	print("Acessando dados do dia %s/%s/%s" % (day[8:],day[5:7],day[0:4]))
 	print(dados['rates']['EUR'])
 	print(dados['rates']['BRL'])
 	print(dados['rates']['USD'])
